@@ -1,5 +1,5 @@
 // Initialize extra fields
-window.ec = window.ec || {};
+/*window.ec = window.ec || {};
 ec.order = ec.order || {};
 ec.order.extraFields = ec.order.extraFields || {};
 
@@ -14,7 +14,7 @@ ec.order.extraFields.evisxbl = {
     'textPlaceholder': '16 Digits BonisLink Card Number',
     'showInInvoice': true,
     'showInNotifications': true,
-};
+};*/
 
 window.Ecwid && Ecwid.refreshConfig();
 
