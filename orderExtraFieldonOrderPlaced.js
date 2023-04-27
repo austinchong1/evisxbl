@@ -1,5 +1,5 @@
 // Initialize extra fields
-window.ec = window.ec || {};
+/*window.ec = window.ec || {};
 ec.order = ec.order || {};
 ec.order.extraFields = ec.order.extraFields || {};
 
@@ -16,7 +16,7 @@ ec.order.extraFields.evisxbl = {
     'showInNotifications': true,
 };
 
-window.Ecwid && Ecwid.refreshConfig();
+window.Ecwid && Ecwid.refreshConfig();*/
 
 Ecwid.OnOrderPlaced.add(function(order){   
 
