@@ -1,5 +1,5 @@
 // Initialize extra fields
-//testing1
+//testing2
 window.ec = window.ec || {};
 ec.order = ec.order || {};
 ec.order.extraFields = ec.order.extraFields || {};
