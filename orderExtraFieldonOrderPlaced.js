@@ -16,8 +16,6 @@ ec.order.extraFields.evisxbl = {
     'showInNotifications': true,
 };
 
-window.Ecwid && Ecwid.refreshConfig();
-
 Ecwid.OnAPILoaded.add(function() {
     console.log("Ecwid storefront JS API has loaded");
 });
