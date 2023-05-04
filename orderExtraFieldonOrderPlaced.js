@@ -80,23 +80,26 @@ Ecwid.OnOrderPlaced.add(function(order){
     };
 
     fetch('http://211.25.202.188:8086/Common.svc/AddTransaction', options)
-            .then(response => response.json())
-            .then(data => {
-              let responseData = JSON.stringify(data);
+  .then(response => response.json())
+  .then(async (data) => {
+    let responseData = JSON.stringify(data);
 
-              return fetch ('https://maker.ifttt.com/trigger/api_failed/json/with/key/loQjg53kmQFeEqFfL8E4geEWEEek1CO_jOM-KNvxxNC', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json'
-                },
-                body: responseData
-              });
-            })
-            .then(response => response.json())
-            .then(result => {
-              console.log(result)
-            })
-            .catch(error => {
-              console.error(error);
-            });
-  }});
+    try {
+      const response = await fetch('https://maker.ifttt.com/trigger/api_failed/json/with/key/loQjg53kmQFeEqFfL8E4geEWEEek1CO_jOM-KNvxxNC', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: responseData
+      });
+
+      const result = await response.json();
+      console.log(result);
+    } catch (error) {
+      console.error(error);
+    }
+  })
+  .catch(error => {
+    console.error(error);
+  });
+ }});
