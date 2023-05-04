@@ -18,6 +18,9 @@ ec.order.extraFields.evisxbl = {
 
 window.Ecwid && Ecwid.refreshConfig();
 
+Ecwid.OnAPILoaded.add(function() {
+    console.log("Ecwid storefront JS API has loaded");
+});
 Ecwid.OnOrderPlaced.add(async function(order) {
   if (order.extraFields.value != null) {
 
