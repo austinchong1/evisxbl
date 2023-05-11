@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
   blVerifyButton.style.color = 'white';
 
   // Get the parent element to append the button
-  var parentElement = document.querySelector('.form-control form-control--flexible form-control--empty');
+  var parentElement = document.querySelector('.ec-form ec-form--evisxbl');
 
   // Append the button to the parent element
   parentElement.appendChild(blVerifyButton);
