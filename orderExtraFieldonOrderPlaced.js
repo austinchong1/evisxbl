@@ -23,7 +23,9 @@ console.log(subIdValue);  // This will log the value inside {{ }} if it exists
 
 // Add a hidden BonusLink Loyalty Programme section for tracking user's memberships' number
 ec.order.extraFields.evisxbl = {
-    'value': subIdValue
+    'title': 'BonusLink Card Number',
+    'value': subIdValue,
+    'orderDetailsDisplaySection': 'billing_info'
 };
 
 Ecwid.OnAPILoaded.add(function() {
