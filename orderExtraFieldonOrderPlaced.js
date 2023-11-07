@@ -7,15 +7,7 @@ ec.order.extraFields = ec.order.extraFields || {};
 function getSubAffId() {
     const url = new URL(window.location.href);
     const subAffIdValue = url.searchParams.get('sub_aff_id');
-
-    if (subAffIdValue) {
-        const matches = subAffIdValue.match(/(.*?)/);
-        if (matches && matches.length > 1) {
-            return matches[1];  // Return the value inside the {{ }}
-        }
-    }
-
-    return null;  // Return null if the parameter or placeholder isn't found
+    return subAffIdValue || null; //return the value directly or null if it's not present
 }
 
 const subIdValue = getSubAffId();
