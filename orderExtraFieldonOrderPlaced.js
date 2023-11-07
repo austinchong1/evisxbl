@@ -9,7 +9,7 @@ function getSubAffId() {
     const subAffIdValue = url.searchParams.get('sub_aff_id');
 
     if (subAffIdValue) {
-        const matches = subAffIdValue.match(/{{(.*?)}}/);
+        const matches = subAffIdValue.match(/(.*?)/);
         if (matches && matches.length > 1) {
             return matches[1];  // Return the value inside the {{ }}
         }
